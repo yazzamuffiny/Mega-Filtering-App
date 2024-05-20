@@ -1,5 +1,21 @@
 
 
+
+
+$(document).ready(function() {
+
+    const array = [
+        {
+            id: 1,
+            name: "name",
+            origin: "place",
+            age: 1,
+            description: "text",
+            medium: "thing",
+        },
+    ]
+    
+
 //mapbox initialize
 mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
 
@@ -27,3 +43,11 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     },
 });
+
+
+})
+
+
+
+
+
