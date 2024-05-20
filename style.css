@@ -1,0 +1,40 @@
+
+/* global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* end global reset */
+
+
+
+
+
+
+
+
+
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 250px;
+}
+
+.swiper-pagination {
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.swiper-pagination-bullet {
+    background: antiquewhite;
+    width: 16px;
+    height: 16px;
+}
+/* END SWIPER */
