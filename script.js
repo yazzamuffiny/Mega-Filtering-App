@@ -453,16 +453,17 @@ $(document).ready(function () {
             `;
 
                 $("#results").append(bookCardHTML);
-                // $(".swipers").forEach(swiperElement => {
-                //     new Swiper(swiperElement, {
-                //         direction: 'vertical',
-                //         loop: true,
-                //         pagination: {
-                //             el: ".swiper-pagination",
-                //             clickable: true,
-                //         }
-                //     });
-                // });
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'vertical',
+                    loop: true,
+            
+                    // If we need pagination
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
 
             })
         }
@@ -476,33 +477,34 @@ $(document).ready(function () {
 
 
 
-    // //mapbox initialize
-    // mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
+    //mapbox token
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
 
-    // const map = new mapboxgl.Map({
-    //     container: 'map',
-    //     style: 'mapbox://styles/mapbox/streets-v11',
-    //     center: [174.7762, -41.2865],
-    //     zoom: 13
-    // });
-
-
-
+ //initialize the map
+    const map = new mapboxgl.Map({
+        container: 'map', //where to put the map
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL - set up in dashboard (street version)
+        center: [175.894064352839, -38.771985313784185], // starting position [lng, lat], get cords from google, remember they give the cords reversed to what we want
+        zoom: 5 // starting zoom
+    });
 
 
 
-    // //initialize swiper js
-    // const swiper = new Swiper('.swiper', {
-    //     // Optional parameters
-    //     direction: 'vertical',
-    //     loop: true,
 
-    //     // If we need pagination
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         clickable: true,
-    //     },
-    // });
+
+
+    //initialize swiper js
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 
 
 
