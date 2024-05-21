@@ -280,9 +280,41 @@ $(document).ready(function () {
 
 
     // ----------------------------- on clicks for sorting
+    //on click high to low sort
+    $("#priceHighToLow").click(function () {
+        const filteredBooks = filterBooks();
+        const sortedBooks = sortBooksPriceHighToLow(filteredBooks);
+        populateResults(sortedBooks);
+    });
 
+    //on click low to high sort
+    $("#priceLowToHigh").click(function () {
+        const filteredBooks = filterBooks();
+        const sortedBooks = sortBooksPriceLowToHigh(filteredBooks);
+        populateResults(sortedBooks);
+    });
 
+    //on click old to new sort
+    $("#dateOldToNew").click(function () {
+        const filteredBooks = filterBooks();
+        const sortedBooks = sortBooksByDateOldToNew(filteredBooks);
+        populateResults(sortedBooks);
+    });
 
+    //on click new to old sort
+    $("#dateNewToOld").click(function () {
+        const filteredBooks = filterBooks();
+        const sortedBooks = sortBooksByDateNewToOld(filteredBooks);
+        populateResults(sortedBooks);
+    });
+
+    //on click alphabetically
+
+    $("#alphabetically").click(function () {
+        const filteredBooks = filterBooks();
+        const sortedBooks = sortBooksAlphabetically(filteredBooks);
+        populateResults(sortedBooks);
+    })
 
 
     // ----------------------------- end on clicks for sorting
@@ -295,7 +327,7 @@ $(document).ready(function () {
             //filter creates array
 
             //check if date matches
-            if ($("#date").val() && parseInt(book.published) <= parseInt($("#date").val())) {
+            if ($("#date").val() && parseInt(book.published) < parseInt($("#date").val()) || $("#date").val() && parseInt(book.published) > parseInt($("#date").val())) {
                 return false; 
             }
 
@@ -323,12 +355,48 @@ $(document).ready(function () {
 
     // -------------------------- sorting fuctions
 
+    //sort books by price high to low
     function sortBooksPriceHighToLow(books) {
         return books.sort((a, b) => {
             const priceA = parseFloat(a.price.replace(/\$/g, ''));
             const priceB = parseFloat(b.price.replace(/\$/g, ''));
             return priceB - priceA;
         });
+    }
+    //sort books by price low to high
+    function sortBooksPriceLowToHigh(books) {
+        return books.sort((a, b) => {
+            const priceA = parseFloat(a.price.replace(/\$/g, ''));
+            const priceB = parseFloat(b.price.replace(/\$/g, ''));
+            return priceA - priceB;
+        });
+    }
+
+    //sort books by pub date old to new
+    function sortBooksByDateOldToNew(books) {
+        return books.sort((a, b) => {
+            const dateA = parseInt(a.published);
+            const dateB = parseInt(b.published);
+            return dateA - dateB;
+        }); 
+    }
+
+    //sort books by pub date old to new
+    function sortBooksByDateNewToOld(books) {
+        return books.sort((a, b) => {
+            const dateA = parseInt(a.published);
+            const dateB = parseInt(b.published);
+            return dateB - dateA;
+        }); 
+    }
+
+    //sort books alphabetically
+    function sortBooksAlphabetically(books) {
+        return books.sort((a, b) => {
+            const nameA = a.name.toLowerCase();
+            const nameB = b.name.toLowerCase();
+            return nameA.localeCompare(nameB);
+        })
     }
 
 
