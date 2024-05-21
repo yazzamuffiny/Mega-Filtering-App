@@ -14,7 +14,82 @@
     <title>Mega Filtering App</title>
 </head>
 <body>
+    <header>
+        <h1>Dungeon and Dragons Books</h1>
+    </header>
+
+
+    <!-- filter tabs -->
+    <div class="filter-container">
+        <!-- publication date (year) -->
+        <div class="filter">
+            <label for="date">Publication Year</label>
+            <select name="date" id="date" class="selection">
+                <option value="">Any</option>
+                <option value="2014">2014+</option>
+                <option value="2015">2015+</option>
+                <option value="2016">2016+</option>
+                <option value="2017">2017+</option>
+                <option value="2018">2018+</option>
+                <option value="2019">2019+</option>
+                <option value="2010">2020+</option>
+                <option value="2021">2021+</option>
+                <option value="2022">2022+</option>
+                <option value="2023">2023+</option>
+                <option value="2024">2024+</option>
+            </select>
+        </div>
+        <!-- type of book -->
+        <div class="filter">
+            <label for="type">Type of Book</label>
+            <select name="type" id="type" class="selection">
+                <option value="">Any</option>
+                <option value="Source Book">Source Book</option>
+                <option value="Adventure">Adventure</option>
+            </select>
+        </div>
+        <!-- classification -->
+        <div class="filter">
+            <label for="classification">Classification</label>
+            <select name="classification" id="classification" class="selection">
+                <option value="">Any</option>
+                <option value="Core Dnd">Core DnD</option>
+                <option value="Legacy">Legacy Content</option>
+                <option value="3rd Party">3rd Party Content</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="sorting-container">
+        <p>Sorting Options</p>
+        <div class="sorting-buttons">
+            <button class="sorting-button" id="priceHighToLow">$$$-$</button>
+            <button class="sorting-button" id="priceLowToHigh">$-$$$</button>
+            <button class="sorting-button" id="dateHighToLow">New-Old</button>
+            <button class="sorting-button" id="dateLowToHigh">Old-New</button>
+            <button class="sorting-button" id="alphabetically">Alphabetically</button>
+        </div>
+    </div>
+
+    <div class="results" id="results">
+        <!-- js populated -->
+    </div>
     
+    <dialog id="detailsModal">
+        <button id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="modal-content">
+            <!-- js population -->
+        </div>
+    </dialog>
+
+
+
+
+
+
+
+
+
 
 
 

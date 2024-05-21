@@ -1,11 +1,6 @@
+$(document).ready(function () {
 
-
-
-
-$(document).ready(function() {
-
-    const books = [
-        {
+    const books = [{
             id: 1,
             name: "Players Handbook",
             published: 2014,
@@ -55,7 +50,7 @@ $(document).ready(function() {
             classification: "Core DnD",
             image1: "./img/scag1.webp",
             image2: "./img/scag2.webp",
-            image3: "./img/scag.webp",
+            image3: "./img/scag3.webp",
         },
         {
             id: 5,
@@ -68,7 +63,7 @@ $(document).ready(function() {
             classification: "Legacy",
             image1: "./img/vgtm1.webp",
             image2: "./img/vgtm2.webp",
-            image3: "./img/vgtm.webp",
+            image3: "./img/vgtm3.webp",
         },
         {
             id: 6,
@@ -80,8 +75,8 @@ $(document).ready(function() {
             type: "Source Book",
             classification: "Core DnD",
             image1: "./img/xgte1.webp",
-            image2: "./img/xgte.webp",
-            image3: "./img/xgte.webp",
+            image2: "./img/xgte2.webp",
+            image3: "./img/xgte3.webp",
         },
         {
             id: 7,
@@ -156,7 +151,7 @@ $(document).ready(function() {
             header: "Clash with the gods of Theros in this campaign sourcebook for the world's greatest roleplaying game.",
             description: "The world's most popular roleplaying game meets the world's most popular trading card game in this campaign sourcebook, detailing the Magic: The Gathering world of Theros for use in Dungeons & Dragons.nLegends walk the lands of Theros, a realm shaped by deities and the deeds of heroes. From the temples of omen-speaking oracles to the five realms of the Underworld, the champions of the gods vie for immortal favor and a place among the world's living myths. Choose a supernatural gift that sets you on the path of destiny, align yourself with one of Theros's fifteen gods, then carve a tale of odysseys and ordeals across the domains of mortals, gods, and the dead.",
             type: "Source Book",
-            classification: "Magic the Gathering",
+            classification: "3rd Party",
             image1: "./img/moot1.webp",
             image2: "./img/moot2.webp",
             image3: "./img/moot3.webp",
@@ -172,7 +167,7 @@ $(document).ready(function() {
             classification: "Legacy",
             image1: "./img/mtof1.webp",
             image2: "./img/mtof2.webp",
-            image3: "./img/mtof.webp",
+            image3: "./img/mtof3.webp",
         },
         {
             id: 14,
@@ -188,92 +183,268 @@ $(document).ready(function() {
             image3: "./img/oota3.webp",
         },
         {
-            id: 10,
-            name: "",
-            published: 2018,
+            id: 15,
+            name: "Princes of the Apocalypse",
+            published: 2015,
             price: "$69.99",
-            header: "",
-            description: "",
-            type: "Source Book / Adventure",
-            classification: "Core DnD / Legacy / 3rd Party",
-            image1: "./img/ .webp",
-            image2: "./img/ .webp",
-            image3: "./img/ .webp",
+            header: "Abolish an ancient evil threatening devastation in this adventure for the world's greatest roleplaying game!",
+            description: "Called by the Elder Elemental Eye to serve, four corrupt prophets have risen from the depths of anonymity to claim mighty weapons with direct links to the power of the elemental princes. Each of these prophets has assembled a cadre of cultists and creatures to serve them in the construction of four elemental temples of lethal design. It is up to adventurers from heroic factions such as the Emerald Enclave and the Order of the Gauntlet to discover where the true power of each prophet lay, and dismantle it before it comes boiling up to obliterate the Realms.",
+            type: "Adventure",
+            classification: "Core DnD",
+            image1: "./img/pota1.webp",
+            image2: "./img/pota2.webp",
+            image3: "./img/pota3.webp",
         },
         {
-            id: 10,
-            name: "",
-            published: 2018,
+            id: 16,
+            name: "Storm Kings Thunder",
+            published: 2016,
             price: "$69.99",
-            header: "",
-            description: "",
-            type: "Source Book / Adventure",
-            classification: "Core DnD / Legacy / 3rd Party",
-            image1: "./img/ .webp",
-            image2: "./img/ .webp",
-            image3: "./img/ .webp",
+            header: "Stand with or against the giants in this adventure for the world's greatest roleplaying game.",
+            description: "This 256-page adventure provides everything a Dungeon Master needs to create an exciting and memorable play experience for the Storm King's Thunder story, including rune magic items, a new treasure option for characters. Giants have emerged from their strongholds to threaten civilization as never before. Hill giants are stealing all the grain and livestock they can, while stone giants have been scouring settlements that have been around forever. Fire giants are press-ganging the small folk into the desert, while frost giant longships have been pillaging along the Sword Coast. Even the elusive cloud giants have been witnessed, their wondrous floating cities appearing above Waterdeep and Baldur's Gate. Where is the storm giant King Hekaton, who is tasked with keeping order among the giants?",
+            type: "Adventure",
+            classification: "Core DnD",
+            image1: "./img/skt1.webp",
+            image2: "./img/skt2.webp",
+            image3: "./img/skt3.webp",
         },
         {
-            id: 10,
-            name: "",
-            published: 2018,
+            id: 17,
+            name: "Tasha's Cauldron of Everything",
+            published: 2020,
             price: "$69.99",
-            header: "",
-            description: "",
-            type: "Source Book / Adventure",
-            classification: "Core DnD / Legacy / 3rd Party",
-            image1: "./img/ .webp",
-            image2: "./img/ .webp",
-            image3: "./img/ .webp",
+            header: "A magical mixture of rules options for the world's greatest roleplaying game.",
+            description: "The wizard Tasha, whose great works include the spell Tasha's hideous laughter, has gathered bits and bobs of precious lore during her illustrious career as an adventurer. Her enemies wouldn't want these treasured secrets scattered across the multiverse, so in defiance, she has collected and codified these tidbits for the enrichment of all. Full of expanded content for players and Dungeon Masters alike, this book is a great addition to the Player's Handbook and the Dungeon Master's Guide. Baked in you'll find more rule options for all the character classes in the Player's Handbook, including more subclass options. Thrown in for good measure is the artificer class, a master of magical invention. And this witch's brew wouldn't be complete without a dash of added artifacts, spellbook options, spells for both player characters and monsters, magical tattoos, group patrons, and other tasty goodies.",
+            type: "Source Book",
+            classification: "Core DnD",
+            image1: "./img/tcoe1.webp",
+            image2: "./img/tcoe2.webp",
+            image3: "./img/tcoe3.webp",
         },
         {
-            id: 10,
-            name: "",
-            published: 2018,
+            id: 18,
+            name: "Tales from the Yawning Portal",
+            published: 2017,
             price: "$69.99",
-            header: "",
-            description: "",
-            type: "Source Book / Adventure",
-            classification: "Core DnD / Legacy / 3rd Party",
-            image1: "./img/ .webp",
-            image2: "./img/ .webp",
-            image3: "./img/ .webp",
+            header: "Dread tales told in the dead of night!",
+            description: "When the shadows grow long in Waterdeep and the fireplace in the taproom of the Yawning Portal dims to a deep crimson glow, adventurers from across the Forgotten Realms, and even from other worlds, spin tales and spread rumors of dark dungeons and lost treasures. Some of the yarns overheard by Durnan, the barkeep of the Yawning Portal, are inspired by places and events in far-flung lands from across the D&D multiverse, and these tales have been collected into a single volume. Within this tome are seven of the most compelling dungeons from the 40+ year history of Dungeons & Dragons. Some are classics that have hosted an untold number of adventurers, while others are some of the most popular adventures ever printed.",
+            type: "Adventure",
+            classification: "Core DnD",
+            image1: "./img/tftyp1.webp",
+            image2: "./img/tftyp2.webp",
+            image3: "./img/tftyp3.webp",
+        },
+        {
+            id: 19,
+            name: "Tyranny of Dragons",
+            published: 2023,
+            price: "$79.99",
+            header: "Defy the Queen of Evil Dragons in this adventure for the world's greatest roleplaying game.",
+            description: "For years, the evil Cult of the Dragon has devoted itself to creating undead dragons in a vain attempt to fulfill an ancient prophecy. However, the cultists were misguided. They misunderstood. But now, under new leadership, the cult believes that the prophecy does not speak of undead dragons, but of a dragon empire that's been extinct for 25,000 years. Tiamat, the queen of evil dragons, has languished in the Nine Hells for millennia. The cult believes that the time of her return is at hand. The cult has a new face and a new mission. It seeks to free Tiamat from the Nine Hells and bring her into the Forgotten Realms. To accomplish its goal, the cult needs five ancient dragon masks and the support of evil dragons everywhere. The cult leaders—each one a \"dragon whisperer\"—have reached out to the evil dragons of the Sword Coast and earned their allegiance.",
+            type: "Adventure",
+            classification: "Core DnD",
+            image1: "./img/tod1.webp",
+            image2: "./img/tod2.webp",
+            image3: "./img/tod3.webp",
+        },
+        {
+            id: 20,
+            name: "Van Richten's Guide to Ravenloft",
+            published: 2021,
+            price: "$69.99",
+            header: "Unleash the horrors of Ravenloft in this campaign sourcebook for the world's greatest roleplaying game.",
+            description: "Terror stalks the nightmare realms of Ravenloft. No one knows this better than monster scholar Rudolph Van Richten. To arm a new generation against the creatures of the night, Van Richten has compiled his correspondence and case files into this tome of eerie tales and chilling truths. Discover the mysteries of Ravenloft, mist-shrouded lands where infamous Darklords lurk among ageless vampires, zombie hordes, cosmic terrors, and worse. Then make your choice. Will you create your own Domains of Dread, settings to host endless terrifying adventures? Or will you join the ranks of haunted heroes who embrace macabre lineages, dual-edged Dark Gifts, haunted subclasses, and other forbidden powers?",
+            type: "Source Book",
+            classification: "Core DnD",
+            image1: "./img/vrgtr1.webp",
+            image2: "./img/vrgtr2.webp",
+            image3: "./img/vrgtr3.webp",
         }
     ]
-    
+    // -------------------------- end array
 
-//mapbox initialize
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
+    // ------------------------- on change for each filter
+    $("#date").change(function () {
+        //filter and populate here
+        filterAndPopulateResults();
+    });
 
-const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [174.7762, -41.2865],
-    zoom: 13
+    $("#type").change(function () {
+        filterAndPopulateResults();
+    });
+
+    $("#classification").change(function () {
+        filterAndPopulateResults();
+    });
+    // ----------------------------- end on change
+
+
+    // ----------------------------- on clicks for sorting
+
+
+
+
+
+    // ----------------------------- end on clicks for sorting
+
+
+    // ---------------------------------- filtering fuctions
+
+    function filterBooks() {
+        const filteredBooks = books.filter(book => {
+            //filter creates array
+
+            //check if date matches
+            if ($("#date").val() && parseInt(book.published) <= parseInt($("#date").val())) {
+                return false; 
+            }
+
+            //checks if type matches
+            const bookType = book.type.toLowerCase();
+            const bookTypeFilter = $("#type").val().toLowerCase()
+            if (bookTypeFilter && !bookType.includes(bookTypeFilter)) {
+                return false;
+            }
+
+            //checks if classification matches
+            const bookClassification = book.classification.toLowerCase();
+            const bookClassificationFilter = $("#classification").val().toLowerCase()
+            if (bookClassificationFilter && !bookClassification.includes(bookClassificationFilter)) {
+                return false;
+            }
+
+
+            return true
+        });
+
+        return filteredBooks;
+    }
+    // -------------------------- end filtering functions
+
+    // -------------------------- sorting fuctions
+
+    function sortBooksPriceHighToLow(books) {
+        return books.sort((a, b) => {
+            const priceA = parseFloat(a.price.replace(/\$/g, ''));
+            const priceB = parseFloat(b.price.replace(/\$/g, ''));
+            return priceB - priceA;
+        });
+    }
+
+
+    // -------------------------- end sorting fuctions
+
+    // -------------------------- populate card functions
+
+    // filter and populate results
+    function filterAndPopulateResults() {
+        const filteredBooks = filterBooks();
+        populateResults(filteredBooks);
+    }
+
+    //initial population of cards
+    filterAndPopulateResults();
+    //populate card function
+
+    function populateResults(filteredResults) {
+        //clear results div
+        $("#results").html("");
+
+        //check filtered properties is empty
+        if (filteredResults.length === 0) {
+            $("#results").append(`<p class="no-results"> No Results </p>`);
+        } else {
+
+            filteredResults.forEach(book => {
+
+                const bookCardHTML = `
+                <div class="book">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="${book.image1}" alt="${book.name} image 1" class="book-image" value=${book.id}></div>
+                            <div class="swiper-slide"><img src="${book.image2}" alt="${book.name} image 2" class="book-image" value=${book.id}></div>
+                            <div class="swiper-slide"><img src="${book.image3}" alt="${book.name} image 3" class="book-image" value=${book.id}></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="book-details">
+                        <h2>${book.name}</h2>
+                        <p>${book.header}</p>
+                        <div class="more-details">
+                            <div class="book-extras">
+                                <p>${book.published}</p>
+                                <p>${book.type}</p>
+                                <p>${book.classification}</p>
+                            </div>
+                            <h4>${book.price}</h4>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                $("#results").append(bookCardHTML);
+                // $(".swipers").forEach(swiperElement => {
+                //     new Swiper(swiperElement, {
+                //         direction: 'vertical',
+                //         loop: true,
+                //         pagination: {
+                //             el: ".swiper-pagination",
+                //             clickable: true,
+                //         }
+                //     });
+                // });
+
+            })
+        }
+    }
+
+
+
+
+
+
+
+
+
+    // //mapbox initialize
+    // mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
+
+    // const map = new mapboxgl.Map({
+    //     container: 'map',
+    //     style: 'mapbox://styles/mapbox/streets-v11',
+    //     center: [174.7762, -41.2865],
+    //     zoom: 13
+    // });
+
+
+
+
+
+
+    // //initialize swiper js
+    // const swiper = new Swiper('.swiper', {
+    //     // Optional parameters
+    //     direction: 'vertical',
+    //     loop: true,
+
+    //     // If we need pagination
+    //     pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //     },
+    // });
+
+
+
+
+
+
+
+
+
+
+
+    //end of jquery
 });
-
-
-
-
-
-
-//initialize swiper js
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-
-
-})
-
-
-
-
-
