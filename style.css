@@ -1,11 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 /* global reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 /* end global reset */
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #0f0f0f;
+}
 
 /* TOP SECTION */
 header {
@@ -14,7 +22,7 @@ header {
     align-items: center;
     padding: 120px 0;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(./img/bg.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("./img/bg.webp");
     background-position: center;
     background-size: cover;
 }
@@ -22,6 +30,8 @@ header h1 {
     font-size: 6em;
     font-weight: 700;
     letter-spacing: 2px;
+    font-family: "Playfair Display SC", "serif";
+    font-weight: 900;
 }
 /* END TOP SECTION */
 
@@ -31,7 +41,6 @@ header h1 {
     justify-content: center;
     gap: 40px;
     padding: 30px 0;
-    background-color: #1f1f1f;
 }
 
 .filter {
@@ -41,26 +50,37 @@ header h1 {
 
 .filter label {
     margin-bottom: 4px;
-    color: white;
+    color: rgb(255, 0, 0);
+    font-weight: 700;
 }
 
 select {
     width: 200px;
     padding: 8px;
     border-radius: 8px;
-    border: 1px solid #1f1f1f;
+    border: 1px solid #ff0000;
+    background-color: #1f1f1f;
+    color: #ff0000;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 /* end nav filters */
 
 /* SORTING BUTTONS */
 .sorting-container {
-    background-color: #1f1f1f;
     padding: 30px 0;
 }
 
 .sorting-container p {
     text-align: center;
-    color: white;
+    color: #ff0000;
+    font-weight: 700;
 }
 
 .sorting-buttons {
@@ -72,11 +92,11 @@ select {
 }
 
 .sorting-button {
-    border: 1px solid white;
+    border: 1px solid #ff0000;
     min-width: 140px;
     padding: 12px 16px;
     font-size: 16px;
-    color: white;
+    color: #ff0000;
     border-radius: 16px;
     background-color: #1f1f1f;
     cursor: pointer;
@@ -84,8 +104,8 @@ select {
 }
 
 .sorting-button:hover {
-    background-color: white;
-    color: #1f1f1f;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: #ffffff;
     transition: all 0.3s ease;
 }
 
@@ -95,7 +115,7 @@ select {
 /* RESULTS GRID */
 .results {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     padding: 30px 60px 120px 60px;
 }
@@ -109,7 +129,7 @@ select {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    background-color: white;
+    background-color: #1f1f1f;
     box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
@@ -124,13 +144,13 @@ select {
 
 .book-image {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     height: 100%;
-    margin: 10px 0;
 }
 
 .book-details {
     padding: 16px;
+    color: white;
 }
 
 .book-details h2 {
@@ -151,7 +171,7 @@ select {
 }
 
 .more-details h4 {
-    color: #33924A;
+    color: #ff0000;
 }
 
 .book-extras {
@@ -161,25 +181,27 @@ select {
 
 .book-extras p {
     font-weight: 400;
-    color: rgb(155, 162, 169);
+    color: rgb(136, 0, 0);
     font-size: 16px;
 }
 
 /* END GRID */
 
-
+body.modal-open {
+    overflow: hidden; /*prevents scrolling while modal is open */
+}
 
 
 /* Swiper */
 
 .swiper {
-    width: 100%;
+    width: 330px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    height: 400px;
+    height: 500px;
 }
 
-.swiper-pagination {
+.swiper-pagination-clickable {
     padding: 4px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
@@ -187,9 +209,15 @@ select {
 }
 
 .swiper-pagination-bullet {
-    background: antiquewhite;
+    background: rgb(255, 0, 0, 0.7);
     width: 16px;
     height: 16px;
+}
+
+.swiper-pagination-bullet-active {
+    width: 17px;
+    height: 17px;
+    background: rgb(255, 0, 0);
 }
 /* END SWIPER */
 
@@ -203,7 +231,7 @@ select {
 .map-container {
     width: 900px;
     height: 500px;
-    border: 10px solid aquamarine;
+    border: 10px solid rgb(0, 0, 0);
 }
 
 #map {
@@ -212,3 +240,24 @@ select {
 }
 
 /* end mapbox */
+
+
+dialog {
+    z-index: 10;
+    position: fixed;
+    width: 40%;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    border: none;
+    position: relative;
+    padding-bottom: 42px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
