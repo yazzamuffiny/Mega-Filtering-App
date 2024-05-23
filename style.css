@@ -115,9 +115,10 @@ select:hover {
 /* RESULTS GRID */
 .results {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 30px 60px 120px 60px;
+    align-items: start;
 }
 
 .no-results {
@@ -125,23 +126,41 @@ select:hover {
     grid-column: 1/-1;
 }
 
-.book {
+.flip-container {
+    perspective: 1000px;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    background-color: #1f1f1f;
+    background-color: #09719e;
+    height: 700px;
+    width: 350px;
     box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease;
 }
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
 
-.book:hover {
-    scale: 1.1;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.front {
+    height: 700px;
+}
 .book-image {
     width: 100%;
     object-fit: cover;
@@ -151,12 +170,15 @@ select:hover {
 .book-details {
     padding: 16px;
     color: white;
+    background-color: #3cff00;
 }
 
 .book-details h2 {
     margin: 8px 0;
     font-weight: 500;
     font-size: 20px;
+    font-family: "Playfair Display SC", "serif";
+    font-weight: 900;
 }
 
 .book-details p {
@@ -185,17 +207,34 @@ select:hover {
     font-size: 16px;
 }
 
+.back {
+    transform: rotateY(180deg);
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.back h2 {
+    color: #ff0000;
+    font-family: "Playfair Display SC", "serif";
+    font-weight: 900;
+    
+}
+
+
+
+
 /* END GRID */
 
-body.modal-open {
-    overflow: hidden; /*prevents scrolling while modal is open */
-}
 
 
 /* Swiper */
 
 .swiper {
-    width: 330px;
+    /* width: 330px; */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     height: 500px;
@@ -240,24 +279,3 @@ body.modal-open {
 }
 
 /* end mapbox */
-
-
-dialog {
-    z-index: 10;
-    position: fixed;
-    width: 40%;
-    height: 60vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 16px;
-    border: none;
-    position: relative;
-    padding-bottom: 42px;
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px);
-}

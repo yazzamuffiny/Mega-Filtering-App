@@ -718,7 +718,7 @@ $(document).ready(function () {
 
             //check if date matches
             if ($("#date").val() && parseInt(book.published) < parseInt($("#date").val()) || $("#date").val() && parseInt(book.published) > parseInt($("#date").val())) {
-                return false; 
+                return false;
             }
 
             //checks if type matches
@@ -768,7 +768,7 @@ $(document).ready(function () {
             const dateA = parseInt(a.published);
             const dateB = parseInt(b.published);
             return dateA - dateB;
-        }); 
+        });
     }
 
     //sort books by pub date old to new
@@ -777,7 +777,7 @@ $(document).ready(function () {
             const dateA = parseInt(a.published);
             const dateB = parseInt(b.published);
             return dateB - dateA;
-        }); 
+        });
     }
 
     //sort books alphabetically
@@ -804,6 +804,7 @@ $(document).ready(function () {
     filterAndPopulateResults();
     //populate card function
 
+
     function populateResults(filteredResults) {
         //clear results div
         $("#results").html("");
@@ -812,58 +813,65 @@ $(document).ready(function () {
         if (filteredResults.length === 0) {
             $("#results").append(`<p class="no-results"> No Results </p>`);
         } else {
-
             filteredResults.forEach(book => {
 
-                const bookCardHTML = `
-                <div class="book">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide"><img src="${book.image1}" alt="${book.name} image 1" class="book-image" value=${book.id}></div>
-                            <div class="swiper-slide"><img src="${book.image2}" alt="${book.name} image 2" class="book-image" value=${book.id}></div>
-                            <div class="swiper-slide"><img src="${book.image3}" alt="${book.name} image 3" class="book-image" value=${book.id}></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="book-details">
-                        <h2>${book.name}</h2>
-                        <p>${book.header}</p>
-                        <div class="more-details">
-                            <div class="book-extras">
-                                <p>${book.published}</p>
-                                <p>${book.type}</p>
-                                <p>${book.classification}</p>
+                const card = `
+                <div class="flip-container" id="flip-container-${book.id}">
+                    <div class="flipper">
+                        <div class="front">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><img src="${book.image1}" alt="${book.name} image 1" class="book-image" value=${book.id}></div>
+                                    <div class="swiper-slide"><img src="${book.image2}" alt="${book.name} image 2" class="book-image" value=${book.id}></div>
+                                    <div class="swiper-slide"><img src="${book.image3}" alt="${book.name} image 3" class="book-image" value=${book.id}></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <h4>${book.price}</h4>
+                            <div class="book-details">
+                                <h2>${book.name}</h2>
+                                <p>${book.header}</p>
+                            </div>
+                            <div class="more-details">
+                                <div class="book-extras">
+                                    <p>${book.published}</p>
+                                    <p>${book.type}</p>
+                                    <p>${book.classification}</p>
+                                </div>
+                                <h4>${book.price}</h4>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="book-details-back">
+                                <h2>${book.name}</h2>
+                                <p class="sub-header">${book.header}</p>
+                                <p class="description">${book.description}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
 
-                $("#results").append(bookCardHTML);
+                $("#results").append(card);
 
-                //swiper for the filtered stuffs
-                const swiper = new Swiper('.swiper', {
-                    // Optional parameters
+                // Initialize Swiper
+                const swiper = new Swiper(`#flip-container-${book.id} .swiper`, {
                     direction: 'horizontal',
                     loop: true,
-            
-                    // If we need pagination
                     pagination: {
-                        el: '.swiper-pagination',
+                        el: `#flip-container-${book.id} .swiper-pagination`,
                         clickable: true,
                     },
                 });
 
-            })
+                // Click event to flip the card
+                $(`#flip-container-${book.id}`).click(function () {
+                    $(this).toggleClass('hover');
+                });
+            });
         }
     }
-
-
-
-
 
 
 
@@ -872,7 +880,7 @@ $(document).ready(function () {
     //mapbox token
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2lhcmFuc2xvdyIsImEiOiJjbHY0ZW91YnYwOGV3MmlwOGQ5b3l3a3J3In0.EFWZEAWA13ehFAw5jdLqJA';
 
- //initialize the map
+    //initialize the map
     const map = new mapboxgl.Map({
         container: 'map', //where to put the map
         style: 'mapbox://styles/mapbox/streets-v11', // style URL - set up in dashboard (street version)
