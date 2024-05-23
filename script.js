@@ -259,399 +259,37 @@ $(document).ready(function () {
             image1: "./img/vrgtr1.webp",
             image2: "./img/vrgtr2.webp",
             image3: "./img/vrgtr3.webp",
-        },
-        {
-            id: 21,
-            name: "Wayfinder's Guide to Eberron",
-            published: 2018,
-            price: "$39.99",
-            header: "Explore the world of Eberron in this campaign prototype for the world's greatest roleplaying game.",
-            description: "Eberron was born in 2002 when Wizards of the Coast launched a worldwide search for a new campaign setting. Wayfinder's Guide to Eberron brings the eponymous campaign setting to the fifth edition of Dungeons & Dragons. This 175 page book gives you everything you need to create an Eberron story or character, exploring the core themes of the setting and the rules to implement them in fifth edition. It includes an overview of Khorvaire and the fantastic city of Sharn, along with a host of background ideas and story hooks.",
-            type: "Source Book",
-            classification: "Legacy",
-            image1: "./img/1.webp",
-            image2: "./img/2.webp",
-            image3: "./img/3.webp",
-        },
-        {
-            id: 22,
-            name: "Guildmaster's Guide to Ravnica",
-            published: 2018,
-            price: "$69.99",
-            header: "Explore a worldwide cityscape filled to the brim with adventure and intrigue in this campaign setting for the world's greatest roleplaying game.",
-            description: "A perpetual haze of dreary rain hangs over the spires of Ravnica. Bundled against the weather, the cosmopolitan citizens in all their fantastic diversity go about their daily business in bustling markets and shadowy back alleys. Through it all, ten guilds—crime syndicates, scientific institutions, church hierarchies, military forces, judicial courts, buzzing swarms, and rampaging gangs—vie for power, wealth, and influence. These guilds are the foundation of power on Ravnica. They have existed for millennia, and each one has its own identity and civic function, its own diverse collection of races and creatures, and its own distinct subculture. Their history is a web of wars, intrigue, and political machinations as they have vied for control of the plane.",
-            type: "Source Book",
-            classification: "Legacy",
-            image1: "./img/1.webp",
-            image2: "./img/2.webp",
-            image3: "./img/3.webp",
-        },
-        {
-            id: 23,
-            name: "Aquisitions Incorperated",
-            published: 2019,
-            price: "$69.99",
-            header: "Explore a wealth of peril and personalities in this sourcebook for Dungeons & Dragons.",
-            description: "When you're just starting out in the adventuring business, it might be nice to have a leg up. It can be a big help to have access to the powerful artifacts, expertise, and jobs that Acquisitions Incorporated (Acq Inc) has to offer a new franchise. Join Omin Dran, Jim Darkmagic, and Viari like never before with the new Acquisitions Incorporated campaign book for Dungeons & Dragons! Set yourself up for success when pursuing your own fantasy-business endeavors, using all the ingredients you need to include Acquisitions Incorporated in your D&D campaign, to establish your own franchise, and take on specialized roles therein. Plus, there are always openings coming available... Just try not to think about why.",
-            type: "Source Book",
-            classification: "Core DnD",
-            image1: "./img/1.webp",
-            image2: "./img/2.webp",
-            image3: "./img/3.webp",
-        },
-        {
-            id: 24,
-            name: "Starter Set - Lost Mines of Phandelver",
-            published: 2014,
-            price: "$29.99",
-            header: "Explore this introductory adventure to get started playing the world's greatest roleplaying game.",
-            description: "The Lost Mine of Phandelver is the introductory adventure for the 5th Edition Starter Set. It is designed for PC levels 1 - 5 and has a good mix of wilderness, dungeon, and village encounters with a decent story. Your players will become heroes as they save the village of Phandalin from hordes of goblins, doppelgangers and worse; all led by a sinister and maniacal Drow mage.",
-            type: "Adventure",
-            classification: "Core DnD",
-            image1: "./img/1.webp",
-            image2: "./img/2.webp",
-            image3: "./img/3.webp",
-        },
-        {
-            id: 25,
-            name: "Tomb of Annihilation",
-            published: 2017,
-            price: "$69.99",
-            header: "Dare to defy death in this adventure for the world's greatest roleplaying game.",
-            description: "The talk of the streets and taverns has all been about the so-called death curse: a wasting disease afflicting everyone who's ever been raised from the dead. Victims grow thinner and weaker each day, slowly but steadily sliding toward the death they once denied. When they finally succumb, they can't be raised—and neither can anyone else, regardless of whether they've ever received that miracle in the past. Temples and scholars of divine magic are at a loss to explain a curse that has affected the entire region, and possibly the entire world. The cause is a necromantic artifact called the Soulmonger, which is located somewhere in Chult, a mysterious peninsula far to the south, ringed with mountains and choked with rainforests.",
-            type: "Adventure",
-            classification: "Core DnD",
-            image1: "./img/1.webp",
-            image2: "./img/2.webp",
-            image3: "./img/3.webp",
         }
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // },
-        // {
-        //     id: 00,
-        //     name: "",
-        //     published: 2000,
-        //     price: "$",
-        //     header: "",
-        //     description: "",
-        //     type: "Source Book / Adventure",
-        //     classification: "Core DnD / Legacy / 3rd Party",
-        //     image1: "./img/1.webp",
-        //     image2: "./img/2.webp",
-        //     image3: "./img/3.webp",
-        // }
     ]
-    // -------------------------- end array
+    // -------------------------- end array for books
+
+    //-----------------locations array
+    const locations = [
+    {
+        name: "Bea DnD Games",
+        address: "199 Jackson Street, Petone, Lower Hutt",
+        long: "174.87889008105387",
+        lat: "-41.22510851332964"
+    },
+    {
+        name: "Goblin Games NZ",
+        address: "155 Karori Road, Karori, Wellington",
+        long: "174.7455664098929",
+        lat: "-41.28241866192481"
+    },
+    {
+        name: "Caffeinated Dragon Games",
+        address: "70 Victoria Street, Wellington Central, Wellington",
+        long: "174.77609515407144",
+        lat: "-41.287989599685886"
+    },
+    {
+        name: "Cerberus Games",
+        address: "66 Dixon Street, Te Aro, Wellington",
+        long: "174.77599399640036",
+        lat: "-41.2912844199473"
+    }
+    ]
 
     // ------------------------- on change for each filter
     $("#date").change(function () {
@@ -845,7 +483,7 @@ $(document).ready(function () {
                         <div class="back">
                             <div class="book-details-back">
                                 <h2>${book.name}</h2>
-                                <p class="sub-header">${book.header}</p>
+                                <h4>${book.header}</h4>
                                 <p class="description">${book.description}</p>
                             </div>
                         </div>
@@ -884,9 +522,38 @@ $(document).ready(function () {
     const map = new mapboxgl.Map({
         container: 'map', //where to put the map
         style: 'mapbox://styles/mapbox/streets-v11', // style URL - set up in dashboard (street version)
-        center: [175.894064352839, -38.771985313784185], // starting position [lng, lat], get cords from google, remember they give the cords reversed to what we want
-        zoom: 5 // starting zoom
+        center: [174.80607878446475, -41.252153264804065], // starting position [lng, lat], get cords from google, remember they give the cords reversed to what we want
+        zoom:  10,// starting zoom
     });
+
+    //map tokens
+    locations.forEach(location => {
+        const marker = new mapboxgl.Marker()
+            .setLngLat([location.long, location.lat])
+            .setPopup(new mapboxgl.Popup({ offset: 25})
+            .setHTML(`<h3>${location.name}</h3><p>${location.address}</p>`))
+            .addTo(map);
+    });
+    
+//fly to
+    const buttonsContainer = document.querySelector('.buttons');
+
+    locations.forEach((location, index) => {
+    const button = document.createElement('button'); 
+    button.className = 'button';
+    button.textContent = location.name;
+    //onclick to do the fly to
+    button.addEventListener('click', function() {
+        map.flyTo({
+            center: [location.long, location.lat],
+            essential: true,
+            zoom: 15
+        }); //end of fly to
+    }); //end of onclick
+    //append button to container
+    buttonsContainer.appendChild(button);
+});
+
 
     //initialize swiper js
     const swiper = new Swiper('.swiper', {

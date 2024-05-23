@@ -32,6 +32,7 @@ header h1 {
     letter-spacing: 2px;
     font-family: "Playfair Display SC", "serif";
     font-weight: 900;
+    text-align: center;
 }
 /* END TOP SECTION */
 
@@ -117,8 +118,7 @@ select:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    padding: 30px 60px 120px 60px;
-    align-items: start;
+    padding: 30px 20px 120px 20px;
 }
 
 .no-results {
@@ -131,8 +131,8 @@ select:hover {
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    background-color: #09719e;
-    height: 700px;
+    /* background-color: #1f1f1f; */
+    min-height: 700px;
     width: 350px;
     box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
@@ -161,6 +161,10 @@ select:hover {
 .front {
     height: 700px;
 }
+.front h2 {
+    text-align: center;
+    color: #ff0000;
+}
 .book-image {
     width: 100%;
     object-fit: cover;
@@ -170,7 +174,6 @@ select:hover {
 .book-details {
     padding: 16px;
     color: white;
-    background-color: #3cff00;
 }
 
 .book-details h2 {
@@ -188,7 +191,7 @@ select:hover {
 
 .more-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 8px 0;
 }
 
@@ -209,10 +212,10 @@ select:hover {
 
 .back {
     transform: rotateY(180deg);
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
     border-radius: 8px;
     color: white;
-    padding: 20px;
+    padding: 40px;
     position: relative;
     width: 100%;
 }
@@ -221,10 +224,17 @@ select:hover {
     color: #ff0000;
     font-family: "Playfair Display SC", "serif";
     font-weight: 900;
-    
 }
 
+.back h4 {
+    margin-top: 20px;
+    font-style: italic;
+}
 
+.back p {
+    margin-top: 20px;
+
+}
 
 
 /* END GRID */
@@ -234,7 +244,7 @@ select:hover {
 /* Swiper */
 
 .swiper {
-    /* width: 330px; */
+    width: 330px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     height: 500px;
@@ -260,22 +270,51 @@ select:hover {
 }
 /* END SWIPER */
 
+
+
+
+
+
 /* map box */
 
 .map-position-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+}
+.map-position-box h2 {
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .map-container {
-    width: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     height: 500px;
-    border: 10px solid rgb(0, 0, 0);
 }
 
 #map {
+    margin-left: 20px;
     height: 100%;
-    width: 100%;
+    width: 50%;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 25%;
+    padding: 20px;
+}
+
+.button {
+    margin: 10px 0;
+    padding: 12px 20px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
 /* end mapbox */
